@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#CC0000">
+<title>NAUSICA — Integrated Maritime Emergency Care</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script type="application/json" id="site-config">
+{
+  "brand": "NAUSICA",
+  "fullName": "NAUTICAL ADVANCED UNIT FOR SYSTEMIC INTEGRATED CARE",
+  "subtitle": "Solusi Evakuasi Medis Darurat dan Rekam Medis Terintegrasi (Electronic Health Record) untuk Wilayah Kepulauan dan Pesisir.",
+  "description": "Konsep kapal ambulans katamaran yang menghubungkan layanan medis di laut dengan tenaga kesehatan di fasilitas rujukan melalui rekam medis digital dan telemedicine.",
+  "location": "Nusa Tenggara Timur, Indonesia",
+  "contactEmail": "lakeishaanindya08@gmail.com",
+  "mentor": "Ismi Tiarassanti S. Pd.",
+  "organization": "Smanba Robotic Club",
+  "institution": "SMAN 1 Bangil, Pasuruan, Jawa Timur",
+  "members": ["Lakeisha Anindya Fatulillah (Ketua)", "Kirana Alya Majidah (Anggota 1)", "Delinda Azarine Velia (Anggota 2)"],
+  "teamName": "POSEIDON RISE",
+  "proposalUrl": "",
+  "repositoryUrl": "",
+  "socialUrl": "",
+  "dimensions": "LOA 25,6 m · LWL 24,16 m · LPP 23 m · B 12 m · H 3,5 m · T 2,2 m",
+  "connectivity": "Komunikasi satelit / jaringan seluler sesuai ketersediaan",
+  "status": "Konsep inovasi untuk proposal KTI",
+  "featuresLabel": "Jelajahi fitur",
+  "footer": "NAUSICA — konsep inovasi pelayanan kesehatan maritim"
+}
+</script>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#beranda" aria-label="NAUSICA, kembali ke atas">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 14.5 5.5 18h13l2.5-3.5M4 11.5h16l-2 3H6l-2-3ZM8 8.5l4-4 4 4M12 4.5v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span>NAUSICA<small>Poseidon Rise · SMAN 1 Bangil</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+      <a href="#tentang">Tentang</a><a href="#fitur">Fitur</a><a href="#simulasi">Demo Sistem</a><a href="#desain-kapal">Desain Kapal</a><a href="#arsitektur">Arsitektur</a><a href="#kontak">Kontak</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn nav-theme" id="themeToggle" aria-label="Ganti mode terang/gelap" title="Ganti mode terang/gelap">◐</button>
+      <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="beranda">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="kicker">Sampan Maritime Competition 2026 · Tim Poseidon Rise</p>
+      <h1>NAUSICA</h1>
+      <p class="hero-name" id="heroFullName">NAUTICAL ADVANCED UNIT FOR SYSTEMIC INTEGRATED CARE</p>
+      <p class="lead" id="heroSubtitle">Solusi Evakuasi Medis Darurat dan Rekam Medis Terintegrasi (Electronic Health Record) untuk Wilayah Kepulauan dan Pesisir.</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="#simulasi">Coba demo sistem <span aria-hidden="true">→</span></a><a class="btn btn-secondary" href="#desain-kapal">Lihat desain kapal</a></div>
+    </div>
+    <figure class="hero-ship">
+      <img src="assets/kapal-perspektif.webp" width="1213" height="649" fetchpriority="high" alt="Render 3D kapal ambulans katamaran NAUSICA: lambung putih dengan livery merah, palang medis, dan tulisan AMBULANCE di sisi kapal">
+      <div class="dim-line" aria-hidden="true"><span>LOA 25,6 m</span></div>
+      <figcaption>Render 3D kapal NAUSICA · dokumen tim</figcaption>
+    </figure>
+  </div>
+  <div class="container">
+    <dl class="spec-strip">
+      <div><dt>Tipe lambung</dt><dd>Katamaran</dd></div>
+      <div><dt>Panjang (LOA)</dt><dd>25,6 m</dd></div>
+      <div><dt>Lebar (B)</dt><dd>12 m</dd></div>
+      <div><dt>Sarat (T)</dt><dd>2,2 m</dd></div>
+      <div><dt>Kecepatan maks.</dt><dd>20 knot</dd></div>
+      <div><dt>Rute awal</dt><dd>Labuan Bajo – Selat Padar</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="section" id="tentang">
+  <div class="container about-grid">
+    <div class="about-copy">
+      <h2>Ketika jarak antarpulau menentukan keselamatan.</h2>
+      <p>Nusa Tenggara Timur terdiri atas ratusan pulau yang dipisahkan laut berarus kuat. Bagi banyak warga dan wisatawan bahari, kapal adalah satu-satunya jalan menuju rumah sakit rujukan, sementara cuaca laut sering tidak stabil.</p>
+      <p class="quote">Insiden KM Putri Sakinah yang terbalik akibat kondisi laut buruk menunjukkan perlunya evakuasi medis yang cepat dan terkoordinasi di perairan NTT.</p>
+    </div>
+    <div class="about-points">
+      <div><h3>Evakuasi di lingkungan maritim</h3><p>Pemantauan kondisi laut dengan peringatan dini, prediksi jalur evakuasi yang aman, dan prediksi pergerakan korban sebagai dukungan keputusan tim penyelamat.</p></div>
+      <div><h3>Informasi pasien tidak terputus</h3><p>Electronic Health Record menjaga data pasien tetap tersambung dari kapal sampai rumah sakit rujukan, termasuk saat serah terima.</p></div>
+      <div><h3>Konsultasi lintas lokasi</h3><p>Telemedicine menghubungkan tenaga medis di kapal dengan dokter rujukan selama perjalanan, sehingga keputusan klinis tidak bergantung pada dokter di atas kapal.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="fitur">
+  <div class="container">
+    <div class="section-head"><h2>Enam komponen layanan, satu alur perawatan.</h2><p>Dari pendaftaran pasien di kapal sampai serah terima di rumah sakit. Pilih salah satu komponen untuk membuka demo simulasinya.</p></div>
+    <div class="feature-grid">
+      <article class="feature-card" tabindex="0" role="button" aria-haspopup="dialog" data-feature="ticket"><header class="feature-top"><span class="feature-no">01</span><span class="tag">Registrasi & triase</span></header><div class="feature-peek" aria-hidden="true"><span class="pk-tag">Emergensi</span><b class="pk-big">NAU-0412</b></div><h3>Smart Patient Ticket</h3><p>Tiket digital berisi identitas, prioritas triase, ringkasan kebutuhan, dan tujuan rujukan pasien untuk menentukan prioritas evakuasi.</p><span class="go">Buka demo <span aria-hidden="true">→</span></span></article>
+      <article class="feature-card" tabindex="0" role="button" aria-haspopup="dialog" data-feature="ehr"><header class="feature-top"><span class="feature-no">02</span><span class="tag">Data klinis terstruktur</span></header><div class="feature-peek" aria-hidden="true"><ol class="pk-sync"><li>Kapal</li><li>Antre</li><li>RS</li></ol></div><h3>Integrated EHR</h3><p>Rekam medis digital: identitas, keluhan utama, alergi, obat, dan tindakan. Data disimpan sementara dan disinkronkan saat jaringan tersedia.</p><span class="go">Buka demo <span aria-hidden="true">→</span></span></article>
+      <article class="feature-card" tabindex="0" role="button" aria-haspopup="dialog" data-feature="tele"><header class="feature-top"><span class="feature-no">03</span><span class="tag">Konsultasi jarak jauh</span></header><div class="feature-peek" aria-hidden="true"><svg class="pk-ecg" viewBox="0 0 224 34" preserveAspectRatio="none"><path d="M0 20 L14 20 L17 17 L20 20 L23 20 L25 24 L28 3 L31 30 L34 20 L40 20 Q44 13 48 20 L56 20 L70 20 L73 17 L76 20 L79 20 L81 24 L84 3 L87 30 L90 20 L96 20 Q100 13 104 20 L112 20 L126 20 L129 17 L132 20 L135 20 L137 24 L140 3 L143 30 L146 20 L152 20 Q156 13 160 20 L168 20 L182 20 L185 17 L188 20 L191 20 L193 24 L196 3 L199 30 L202 20 L208 20 Q212 13 216 20 L224 20"/></svg></div><h3>Real-time Telemedicine</h3><p>Konsultasi video dan pengiriman tanda vital (SpO₂, tekanan darah, EKG) ke dokter rujukan, termasuk pengiriman resep obat secara online.</p><span class="go">Buka demo <span aria-hidden="true">→</span></span></article>
+      <article class="feature-card" tabindex="0" role="button" aria-haspopup="dialog" data-feature="evac"><header class="feature-top"><span class="feature-no">04</span><span class="tag">Kondisi laut & rute</span></header><div class="feature-peek" aria-hidden="true"><span class="sea-status" data-level="tenang">Aman</span><span class="sea-status" data-level="sedang">Waspada</span><span class="sea-status" data-level="buruk">Bahaya</span></div><h3>Smart Evacuation</h3><p>Pemantauan kondisi laut dengan peringatan, prediksi jalur evakuasi yang aman, dan prediksi pergerakan korban di sekitar Selat Padar.</p><span class="go">Buka demo <span aria-hidden="true">→</span></span></article>
+      <article class="feature-card" tabindex="0" role="button" aria-haspopup="dialog" data-feature="monitor"><header class="feature-top"><span class="feature-no">05</span><span class="tag">Monitoring klinis</span></header><div class="feature-peek" aria-hidden="true"><svg class="pk-trend" viewBox="0 0 120 34" preserveAspectRatio="none"><polyline points="0,22 15,20 30,23 45,18 60,19 75,14 90,15 105,11 120,12"/></svg><b class="pk-big">97<small>% SpO₂</small></b></div><h3>Pemantauan Pasien</h3><p>Panel tren tanda vital selama perjalanan untuk membantu petugas mengenali perubahan kondisi yang perlu segera dievaluasi.</p><span class="go">Buka demo <span aria-hidden="true">→</span></span></article>
+      <article class="feature-card" tabindex="0" role="button" aria-haspopup="dialog" data-feature="referral"><header class="feature-top"><span class="feature-no">06</span><span class="tag">Darat–laut terhubung</span></header><div class="feature-peek" aria-hidden="true"><span class="pk-ok">Diterima</span><b class="pk-mid">IGD RSUD Komodo · 10.29</b></div><h3>Koordinasi Rujukan</h3><p>Alur serah terima ke RSUD Komodo atau RS Siloam Labuan Bajo agar tim darat menyiapkan penerimaan pasien lebih awal.</p><span class="go">Buka demo <span aria-hidden="true">→</span></span></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="simulasi">
+  <div class="container">
+    <div class="section-head"><h2>Satu pasien, dari kapal sampai rumah sakit.</h2><p>Ikuti satu kasus contoh, mulai dari tiket pasien di kapal sampai serah terima di IGD. Semua nama, angka, dan pesan di bagian ini adalah simulasi.</p></div>
+    <div class="journey" id="journey">
+      <div class="journey-head">
+        <p class="journey-case"><span class="journey-tag">Kasus simulasi</span> <strong>Wisatawan, 34 tahun,</strong> terjatuh di dek kapal wisata di Selat Padar. Kepala terluka dan sempat tidak sadar beberapa detik.</p>
+        <div class="field journey-role"><label for="journeyRole">Masuk sebagai</label><select id="journeyRole"><option value="medis">Tenaga medis kapal</option><option value="dokter">Dokter fasilitas rujukan</option><option value="koordinator">Koordinator evakuasi</option><option value="admin">Administrator</option></select></div>
+      </div>
+
+      <div class="journey-steps" role="tablist" aria-label="Langkah alur sistem">
+        <i class="steps-fill" aria-hidden="true"></i><i class="steps-ship" aria-hidden="true"></i>
+        <button class="journey-step" role="tab" id="jt-0" aria-controls="jp-0" aria-selected="true" data-step="0"><b>01</b><span>Tiket pasien</span><small>09.10 · Selat Padar</small></button>
+        <button class="journey-step" role="tab" id="jt-1" aria-controls="jp-1" aria-selected="false" tabindex="-1" data-step="1"><b>02</b><span>Rekam medis</span><small>09.14 · Selat Padar</small></button>
+        <button class="journey-step" role="tab" id="jt-2" aria-controls="jp-2" aria-selected="false" tabindex="-1" data-step="2"><b>03</b><span>Evakuasi</span><small>09.19 · Berangkat</small></button>
+        <button class="journey-step" role="tab" id="jt-3" aria-controls="jp-3" aria-selected="false" tabindex="-1" data-step="3"><b>04</b><span>Telemedicine</span><small>09.31 · Di perjalanan</small></button>
+        <button class="journey-step" role="tab" id="jt-4" aria-controls="jp-4" aria-selected="false" tabindex="-1" data-step="4"><b>05</b><span>Serah terima</span><small>10.29 · Labuan Bajo</small></button>
+      </div>
+
+      <div class="journey-panel active" role="tabpanel" id="jp-0" aria-labelledby="jt-0">
+        <div class="panel-copy">
+          <h3>Smart Patient Ticket</h3>
+          <p>Petugas medis kapal mendaftarkan pasien dan menentukan prioritas triase. Tiket digital ini menyertai pasien sampai serah terima.</p>
+          <fieldset class="seg" id="triageChoice"><legend>Prioritas triase</legend>
+            <label><input type="radio" name="triage" value="emergensi" checked><span>Emergensi</span></label>
+            <label><input type="radio" name="triage" value="urgent"><span>Urgent</span></label>
+            <label><input type="radio" name="triage" value="non-urgent"><span>Non-urgent</span></label>
+          </fieldset>
+        </div>
+        <article class="ticket" id="ticket" data-level="emergensi" aria-live="polite">
+          <header class="ticket-band"><span>Smart Patient Ticket</span><strong class="js-level">Emergensi</strong></header>
+          <div class="ticket-body">
+            <div class="ticket-no"><small>No. tiket</small><strong>NAU-0412</strong></div>
+            <dl class="ticket-data">
+              <div><dt>Pasien</dt><dd>Pasien A · L · 34 th</dd></div>
+              <div><dt>Keluhan</dt><dd>Cedera kepala, sempat tidak sadar</dd></div>
+              <div><dt>Lokasi</dt><dd>Selat Padar</dd></div>
+              <div><dt>Tujuan rujukan</dt><dd>IGD RSUD Komodo</dd></div>
+            </dl>
+          </div>
+          <footer class="ticket-foot"><span>Dibuat 09.10 oleh petugas medis kapal</span><span>Data contoh</span></footer>
+        </article>
+      </div>
+
+      <div class="journey-panel" role="tabpanel" id="jp-1" aria-labelledby="jt-1" hidden>
+        <div class="panel-copy">
+          <h3>Rekam medis elektronik</h3>
+          <p>Isi tiket masuk ke rekam medis. Sinyal di laut sering hilang, jadi catatan disimpan dulu di kapal dan terkirim otomatis begitu jaringan tersedia.</p>
+          <div class="sync" id="sync" data-state="0">
+            <ol class="sync-steps"><li>Tersimpan di kapal</li><li>Menunggu sinyal</li><li>Tersinkron ke RS</li></ol>
+            <button class="btn btn-secondary" id="syncToggle" type="button">Simulasikan sinyal masuk</button>
+          </div>
+        </div>
+        <article class="ehr" id="ehr">
+          <header class="ehr-head"><div><small>Rekam medis</small><strong>NAU-0412 · Pasien A</strong></div><span class="ehr-access" id="ehrAccess">Baca &amp; tulis</span></header>
+          <dl class="ehr-rows">
+            <div><dt>Prioritas</dt><dd class="js-level">Emergensi</dd></div>
+            <div class="clinical"><dt>Keluhan utama</dt><dd>Cedera kepala setelah jatuh, tidak sadar ± 10 detik</dd></div>
+            <div class="clinical"><dt>Riwayat alergi</dt><dd>Belum diketahui, perlu konfirmasi keluarga</dd></div>
+            <div class="clinical"><dt>Tindakan</dt><dd><ul><li><time>09.12</time>Luka dibersihkan dan dibalut</li><li><time>09.13</time>Oksigen 4 L/menit</li><li><time>09.14</time>Cek kesadaran tiap 10 menit</li></ul></dd></div>
+          </dl>
+          <p class="ehr-hidden" id="ehrHidden" hidden>Data klinis disembunyikan untuk peran ini. Akses rekam medis dibatasi sesuai peran pengguna.</p>
+        </article>
+      </div>
+
+      <div class="journey-panel" role="tabpanel" id="jp-2" aria-labelledby="jt-2" hidden>
+        <div class="panel-copy">
+          <h3>Smart Evacuation</h3>
+          <p>Sistem memantau kondisi laut, mengirim peringatan, dan menyarankan jalur aman ke Labuan Bajo. Keputusan akhir tetap di tangan nakhoda.</p>
+          <fieldset class="seg" id="seaChoice"><legend>Kondisi laut (simulasi)</legend>
+            <label><input type="radio" name="sea" value="tenang"><span>Tenang</span></label>
+            <label><input type="radio" name="sea" value="sedang" checked><span>Sedang</span></label>
+            <label><input type="radio" name="sea" value="buruk"><span>Buruk</span></label>
+          </fieldset>
+          <dl class="sea-read" aria-live="polite">
+            <div><dt>Gelombang</dt><dd id="jWave">1,25–2,5 m</dd></div>
+            <div><dt>Angin</dt><dd id="jWind">± 16 knot</dd></div>
+            <div><dt>Status</dt><dd><span class="sea-status" id="jStatus" data-level="sedang">Waspada</span></dd></div>
+            <div><dt>Jalur</dt><dd id="jRoute">Via utara Rinca, kecepatan dikurangi</dd></div>
+          </dl>
+        </div>
+        <div class="map-demo"><svg class="sea-map" viewBox="0 0 600 270" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Peta ilustratif rute Marina Labuan Bajo ke Selat Padar, bukan peta navigasi aktual"><rect width="600" height="270" fill="#C5EAF0"/><g fill="#A6D4B5"><path d="M478 0H600V270H508Q478 222 496 172Q462 122 492 72Q466 32 478 0Z"/><path d="M300 112Q332 88 372 108Q398 148 372 194Q336 216 306 190Q284 152 300 112Z"/><path d="M196 168Q218 152 242 164Q250 190 228 204Q202 200 196 168Z"/><path d="M18 64Q70 34 122 66Q152 118 110 166Q58 186 28 146Q2 104 18 64Z"/></g><ellipse class="sea-zone" cx="268" cy="186" rx="50" ry="32" fill="#E5484D" opacity=".18" stroke="#E5484D" stroke-dasharray="5 5"/><ellipse cx="236" cy="232" rx="34" ry="13" fill="#F59E0B" opacity=".3" stroke="#D97706" stroke-dasharray="4 4"/><path d="M262 182 240 224" stroke="#D97706" stroke-width="2" marker-end="url(#driftArrow)"/><defs><marker id="driftArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#D97706"/></marker></defs><path d="M494 78Q410 66 336 82Q282 104 264 176" stroke="#00487C" stroke-width="4" stroke-dasharray="8 8" fill="none"/><circle cx="264" cy="180" r="8" fill="#E5484D" stroke="#fff" stroke-width="3"/><circle cx="494" cy="78" r="8" fill="#00487C" stroke="#fff" stroke-width="3"/><path d="M520 112h10m-5-5v10" stroke="#E5484D" stroke-width="3"/><text x="430" y="62">Marina Labuan Bajo</text><text x="536" y="117">RS rujukan</text><text x="322" y="152">Rinca</text><text x="196" y="160">Padar</text><text x="48" y="112">Komodo</text><text x="282" y="214">Selat Padar</text><text x="140" y="256">Prediksi area hanyut korban</text></svg><div class="map-caption" style="top:12px;bottom:auto">Ilustrasi tidak berskala · bukan untuk navigasi</div></div>
+      </div>
+
+      <div class="journey-panel" role="tabpanel" id="jp-3" aria-labelledby="jt-3" hidden>
+        <div class="panel-copy">
+          <h3>Telemedicine</h3>
+          <p>Dokter di rumah sakit rujukan melihat tanda vital pasien selama perjalanan dan memberi instruksi, termasuk resep digital.</p>
+          <ul class="consult-log">
+            <li><b>Dokter jaga IGD</b><p>Pertahankan oksigen. Kabari segera kalau kesadaran menurun.</p><time>09.33</time></li>
+            <li class="rx"><b>E-resep RX-0412</b><p>Paracetamol 500 mg, bila nyeri</p><time>09.35</time></li>
+            <li class="me"><b>Petugas kapal</b><p>Dimengerti. Pasien sadar dan menjawab dengan jelas.</p><time>09.36</time></li>
+          </ul>
+        </div>
+        <div class="monitor" role="img" aria-label="Monitor tanda vital berisi data contoh: detak jantung 96, SpO2 97 persen, tekanan darah 132/84, napas 20 per menit">
+          <div class="monitor-top"><span>Monitor · NAU-0412</span><span class="monitor-live">Terkirim ke RS</span></div>
+          <svg class="ecg" viewBox="0 0 400 80" preserveAspectRatio="none" aria-hidden="true"><g id="ecgTrace"><path class="ecg-line" id="ecgPath"/></g></svg>
+          <dl class="monitor-vals">
+            <div class="v-hr"><dt>HR</dt><dd>96<small>bpm</small></dd></div>
+            <div class="v-spo"><dt>SpO₂</dt><dd>97<small>%</small></dd></div>
+            <div class="v-bp"><dt>Tensi</dt><dd>132/84<small>mmHg</small></dd></div>
+            <div class="v-rr"><dt>Napas</dt><dd>20<small>/mnt</small></dd></div>
+          </dl>
+          <p class="monitor-note">Data contoh · belum terhubung ke alat medis</p>
+        </div>
+      </div>
+
+      <div class="journey-panel" role="tabpanel" id="jp-4" aria-labelledby="jt-4" hidden>
+        <div class="panel-copy">
+          <h3>Serah terima</h3>
+          <p>Saat kapal sandar, rumah sakit sudah menerima tiket, rekam medis, tanda vital, dan resep. Tim IGD tidak perlu mencatat ulang dari awal.</p>
+          <button class="btn btn-secondary" id="journeyRestart" type="button">Ulangi dari awal</button>
+        </div>
+        <article class="handover">
+          <header class="handover-head"><div><small>Diterima</small><strong>IGD RSUD Komodo</strong></div><span class="handover-ok">10.29</span></header>
+          <ol class="handover-log">
+            <li><time>09.10</time><span>Tiket NAU-0412 dibuat, prioritas <b class="js-level">Emergensi</b></span></li>
+            <li><time>09.14</time><span>Rekam medis awal tercatat di kapal</span></li>
+            <li><time>09.19</time><span id="handoverRoute">Berangkat dari Selat Padar via utara Rinca</span></li>
+            <li><time>09.31</time><span>Konsultasi dengan dokter jaga IGD, e-resep terbit</span></li>
+            <li><time>10.29</time><span>Sandar di Marina Labuan Bajo, pasien diserahkan</span></li>
+          </ol>
+          <footer class="handover-foot">Dari tiket sampai serah terima: <strong>79 menit</strong> · data contoh</footer>
+        </article>
+      </div>
+
+      <div class="journey-nav">
+        <button class="btn btn-secondary" id="journeyPrev" type="button" disabled>Sebelumnya</button>
+        <span id="journeyCount">Langkah 1 dari 5</span>
+        <button class="btn btn-primary" id="journeyNext" type="button">Lanjut</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="desain-kapal">
+  <div class="container">
+    <div class="section-head"><h2>Desain kapal ambulans NAUSICA.</h2><p>Lambung katamaran dipilih karena stabil secara melintang, geladaknya luas untuk ruang triase dan perawatan, serta hambatannya rendah pada kecepatan operasional.</p></div>
+    <div class="views">
+      <figure class="view view-persp"><img src="assets/kapal-perspektif.webp" width="1213" height="649" loading="lazy" alt="Kapal NAUSICA tampak perspektif dari sisi kanan depan"><figcaption><b>Perspektif</b><span>Model 3D</span></figcaption></figure>
+      <figure class="view"><img src="assets/kapal-samping.webp" width="1232" height="569" loading="lazy" alt="Kapal NAUSICA tampak samping, memperlihatkan dua dek dan livery ambulans"><figcaption><b>Tampak samping</b><span>Profil</span></figcaption></figure>
+      <div class="view-pair">
+        <figure class="view"><img src="assets/kapal-atas.webp" width="1004" height="373" loading="lazy" alt="Kapal NAUSICA tampak atas dengan geladak kayu dan helipad merah"><figcaption><b>Tampak atas</b></figcaption></figure>
+        <figure class="view"><img src="assets/kapal-depan.webp" width="491" height="615" loading="lazy" alt="Kapal NAUSICA tampak depan, memperlihatkan dua lambung katamaran"><figcaption><b>Tampak depan</b></figcaption></figure>
+      </div>
+    </div>
+    <div class="drawings">
+      <figure class="view drawing"><a href="assets/general-arrangement.webp" target="_blank" rel="noopener" title="Buka gambar ukuran penuh"><img src="assets/general-arrangement.webp" width="2507" height="1570" loading="lazy" alt="Gambar General Arrangement kapal NAUSICA: tampak atas, samping, depan, dan isometri dengan tata letak ruang pasien"></a><figcaption><b>General Arrangement</b><span>Rencana umum</span></figcaption><dl class="drawing-meta"><div><dt>Skala</dt><dd>1:100</dd></div><div><dt>Satuan</dt><dd>cm</dd></div><div><dt>Tanggal</dt><dd>9/10/26</dd></div><div><dt>Digambar</dt><dd>Delinda A. V.</dd></div><div><dt>Diperiksa &amp; disetujui</dt><dd>Ismi Tiarassanti S. Pd.</dd></div><div><dt>Instansi</dt><dd>SMAN 1 Bangil</dd></div></dl></figure>
+      <figure class="view drawing"><a href="assets/lines-plan.webp" target="_blank" rel="noopener" title="Buka gambar ukuran penuh"><img src="assets/lines-plan.webp" width="2026" height="1500" loading="lazy" alt="Gambar Lines Plan kapal NAUSICA: body plan, sheer plan, dan half breadth plan"></a><figcaption><b>Lines Plan</b><span>Body, sheer, half breadth · AutoCAD</span></figcaption><dl class="drawing-meta"><div><dt>Skala</dt><dd>1:100</dd></div><div><dt>Satuan</dt><dd>cm</dd></div><div><dt>Tanggal</dt><dd>9/10/26</dd></div><div><dt>Digambar</dt><dd>Delinda A. V.</dd></div><div><dt>Diperiksa &amp; disetujui</dt><dd>Ismi Tiarassanti S. Pd.</dd></div><div><dt>Instansi</dt><dd>SMAN 1 Bangil</dd></div></dl></figure>
+    </div>
+    <div class="vessel-data">
+      <div>
+        <h3>Ukuran utama</h3>
+        <table class="dimension-table"><thead><tr><th>Parameter</th><th>Nilai</th><th>Satuan</th></tr></thead><tbody>
+          <tr><td>LOA<small>Panjang keseluruhan</small></td><td>25,6</td><td>m</td></tr>
+          <tr><td>LWL<small>Panjang garis air</small></td><td>24,16</td><td>m</td></tr>
+          <tr><td>LPP<small>Panjang antara garis tegak</small></td><td>23</td><td>m</td></tr>
+          <tr><td>B<small>Lebar</small></td><td>12</td><td>m</td></tr>
+          <tr><td>H<small>Tinggi</small></td><td>3,5</td><td>m</td></tr>
+          <tr><td>T<small>Sarat</small></td><td>2,2</td><td>m</td></tr>
+        </tbody></table>
+      </div>
+      <div>
+        <h3>Data desain & analisis</h3>
+        <div class="spec-list"><div class="spec-row"><span>Tipe lambung</span><strong>Katamaran (parent design)</strong></div><div class="spec-row"><span>Kecepatan maksimal</span><strong>20 knot</strong></div><div class="spec-row"><span>Analisis hidrostatik</span><strong>Maxsurf Stability · sarat 10–200 cm</strong></div><div class="spec-row"><span>Analisis hambatan</span><strong>Maxsurf Resistance · Molland</strong></div><div class="spec-row"><span>Lines plan</span><strong>AutoCAD</strong></div><div class="spec-row"><span>Rute operasi</span><strong>Marina Labuan Bajo – Selat Padar</strong></div><div class="spec-row"><span>Fasilitas rujukan</span><strong>RS Siloam Labuan Bajo · RSUD Komodo</strong></div></div>
+        <p class="disclaimer">Dimensi merupakan data desain awal. Stabilitas pada kondisi miring, kebutuhan daya, dan kekuatan konstruksi masih perlu dikaji lebih lanjut.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="arsitektur">
+  <div class="container">
+    <div class="section-head"><h2>Rancangan sistem yang saling terhubung.</h2><p>Arsitektur konseptual menghubungkan petugas di kapal, pasien, jaringan komunikasi, dan fasilitas rujukan.</p></div>
+    <div class="spec-grid">
+      <article class="spec-card"><h3>Profil desain kapal</h3><p>Platform katamaran dengan ukuran utama dari tahap desain awal.</p><div class="spec-list"><div class="spec-row"><span>Jenis platform</span><strong>Katamaran</strong></div><div class="spec-row"><span>Dimensi kapal</span><strong id="dimensionValue">Belum ditetapkan</strong></div><div class="spec-row"><span>Fasilitas medis</span><strong>Ruang triase, perawatan, konsultasi</strong></div><div class="spec-row"><span>Keselamatan</span><strong>Perlu kajian stabilitas & regulasi</strong></div></div></article>
+      <article class="spec-card"><h3>Komunikasi & konektivitas</h3><p>Jaringan dipilih sesuai cakupan di sepanjang rute, dengan penyimpanan sementara saat koneksi terputus.</p><div class="spec-list"><div class="spec-row"><span>Media komunikasi</span><strong>Seluler / satelit</strong></div><div class="spec-row"><span>Sinkronisasi EHR</span><strong>Saat jaringan tersedia</strong></div><div class="spec-row"><span>Keamanan data</span><strong>Enkripsi & kontrol akses</strong></div><div class="spec-row"><span>Integrasi perangkat</span><strong>Memerlukan uji kompatibilitas</strong></div></div></article>
+    </div>
+    <div class="spec-card flow"><h3>Aliran data medis</h3><p class="flow-line"><span>Smart Patient Ticket</span><span>EHR, disimpan di kapal</span><span>Jaringan seluler/satelit terenkripsi</span><span>Dokter rujukan</span><span>Serah terima</span></p><p class="disclaimer">Coba alurnya langsung di <a href="#simulasi">Demo Sistem</a>. Gambaran rancangan proposal, bukan sistem yang sudah terintegrasi atau tervalidasi secara klinis.</p></div>
+    <div class="timeline"><div class="timeline-item"><small>Tahap 1</small><h3>Perancangan</h3><p>Validasi kebutuhan pengguna, desain kapal, alur klinis, dan persyaratan keselamatan.</p></div><div class="timeline-item"><small>Tahap 2</small><h3>Prototipe sistem</h3><p>Prototipe EHR dan telemedicine dengan kontrol privasi dan uji interoperabilitas.</p></div><div class="timeline-item"><small>Tahap 3</small><h3>Uji & evaluasi</h3><p>Evaluasi waktu respons, keberhasilan sinkronisasi, keandalan komunikasi, dan keselamatan operasional.</p></div></div>
+  </div>
+</section>
+
+<section class="section section-alt" id="kontak">
+  <div class="container contact-grid">
+    <div class="contact-panel">
+      <h2>Mari membangun akses kesehatan yang lebih terhubung.</h2>
+      <p>NAUSICA adalah konsep inovasi untuk diskusi, penelitian, dan kolaborasi lintas bidang kesehatan dan kemaritiman.</p>
+      <div class="contact-lines">
+        <div class="contact-line"><strong>Email tim</strong><span id="contactEmail"><a href="mailto:lakeishaanindya08@gmail.com">lakeishaanindya08@gmail.com</a></span></div>
+        <div class="contact-line"><strong>Fokus wilayah</strong><span>Nusa Tenggara Timur · rute awal Marina Labuan Bajo – Selat Padar</span></div>
+      </div>
+      <div class="title-block" aria-label="Identitas tim pengembang">
+        <div class="tb-head"><strong>POSEIDON RISE</strong><span>Smanba Robotic Club</span></div>
+        <div><span>Ketua tim</span><strong>Lakeisha Anindya Fatulillah</strong></div>
+        <div><span>Guru pendamping</span><strong>Ismi Tiarassanti S. Pd.</strong></div>
+        <div><span>Anggota 1</span><strong>Kirana Alya Majidah</strong></div>
+        <div><span>Anggota 2</span><strong>Delinda Azarine Velia</strong></div>
+        <div><span>Instansi</span><strong>SMAN 1 Bangil</strong></div>
+        <div><span>Lokasi</span><strong>Pasuruan, Jawa Timur</strong></div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3>Form minat kolaborasi</h3><p>Form ini menyusun draf pesan untuk Anda salin. Tidak ada data yang dikirim ke server.</p>
+      <form id="contactForm" class="mini-form">
+        <div class="field"><label for="contactName">Nama</label><input id="contactName" required placeholder="Nama Anda" autocomplete="name"></div>
+        <div class="field"><label for="contactOrg">Institusi</label><input id="contactOrg" placeholder="Sekolah / institusi" autocomplete="organization"></div>
+        <div class="field full"><label for="contactMail">Email</label><input id="contactMail" type="email" required placeholder="nama@institusi.id" autocomplete="email"></div>
+        <div class="field full"><label for="contactTopic">Topik</label><select id="contactTopic"><option>Diskusi proposal</option><option>Kolaborasi kesehatan</option><option>Rekayasa kapal / maritim</option><option>Teknologi EHR dan telemedicine</option><option>Lainnya</option></select></div>
+        <div class="field full"><label for="contactMessage">Pesan</label><textarea id="contactMessage" rows="4" required placeholder="Ceritakan kebutuhan atau masukan Anda"></textarea></div>
+        <div class="field full"><button class="btn btn-primary" type="submit">Buat draf pesan <span aria-hidden="true">→</span></button></div>
+      </form>
+      <div id="contactResult" class="form-message" aria-live="polite"></div>
+      <button id="copyMessage" class="btn btn-secondary btn-small" style="display:none;margin-top:10px">Salin draf pesan</button>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="container footer-inner"><div><div class="footer-brand">NAUSICA</div><div id="footerText">Konsep inovasi pelayanan kesehatan maritim</div></div><div>Mendukung SDGs 3 · Kehidupan Sehat dan Sejahtera</div></div><div class="container disclaimer">Website ini adalah prototipe pendukung proposal KTI. Bukan layanan ambulans aktif, bukan alat diagnosis, dan tidak terhubung dengan rumah sakit, perangkat medis, sistem navigasi, atau jaringan penyelamatan.</div></footer>
+
+<aside class="customizer" aria-label="Ubah tampilan">
+  <button id="customizerToggle" class="customizer-toggle" aria-expanded="false" aria-controls="customizerBody" aria-label="Ubah tampilan" title="Ubah tampilan">Aa</button>
+  <div class="customizer-body" id="customizerBody" hidden>
+    <p class="customizer-title">Ubah tampilan</p>
+    <div class="field"><label for="colorChoice">Warna utama</label><select id="colorChoice"><option value="#CC0000">Merah livery kapal</option><option value="#00487C">Biru laut medis</option><option value="#075E54">Hijau klinis</option><option value="#293B8F">Indigo teknologi</option><option value="#374151">Arang profesional</option></select></div>
+    <div class="field"><label for="themeChoice">Mode tampilan</label><select id="themeChoice"><option value="auto">Otomatis perangkat</option><option value="light">Terang</option><option value="dark">Gelap</option></select></div>
+    <div class="field"><label for="fontChoice">Ukuran teks</label><select id="fontChoice"><option value="15px">Kecil</option><option value="16px" selected>Standar</option><option value="18px">Besar</option></select></div>
+    <p class="customizer-note">Pengaturan langsung diterapkan pada halaman ini.</p>
+  </div>
+</aside>
+
+<div class="feature-detail-overlay" id="featureDetail" role="dialog" aria-modal="true" aria-labelledby="featureDetailTitle" aria-hidden="true"><div class="feature-detail-window"><div class="feature-detail-head"><div><span id="featureDetailKicker" class="eyebrow">DEMO FITUR NAUSICA</span><h2 id="featureDetailTitle">Detail fitur</h2></div><button class="feature-detail-close" id="closeFeatureDetail" aria-label="Tutup tampilan fitur">×</button></div><div class="feature-detail-body" id="featureDetailBody"></div></div></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
+
